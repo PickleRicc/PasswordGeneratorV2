@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --darkgray: #24232C;
+    --lightgray: #817D92;
+    --whitegray: #E6E5EA;
+    --black: #18171F;
+    --green: #A4FFAF;
+    --red: #F64A4A;
+    --orange: #FB7C58;
+    --yellow: #F8CD65; 
+}
+
+  
+body {
+    font-family: 'REM', sans-serif;
+    background-color: var(--black);
+    color: var(--whitegray);
+    font-size: 16px;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--whitegray);
+    letter-spacing: 2px;
+}
+
+h6 {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--lightgray);
+    letter-spacing: 2px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 24px;
+    text-align: center;
+    color: var(--lightgray);
+}
+
+.container {
+    width: 540px;
+    height:528px;
+    margin: auto;
+    
+}
+
+.password-out {
+    background-color: var(--darkgray);
+    width: 540px;
+    height:80px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px;
+}
+
+.generate-password-container {
+    background-color: var(--darkgray);
+    width: 540px;
+    height:528px;
+    margin: auto;    
+    align-items: center;
+    padding: 32px;
+    margin-top: 24px;
+}
+
+.character-length {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.slider {
+    width: 100%;
+    height: 7px;
+    appearance: none; /* Remove default appearance on WebKit browsers */
+    background-color: var(--black);
+    outline: none;
+    
+
+}
+
+.slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 28px;
+    cursor: pointer;
+    
+}
+
+.slider::-webkit-slider-thumb {
+    appearance: none; /* Override default look */
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: var(--green);
+    cursor: pointer;
+    /* box-shadow: -400px 0 0 400px var(--green); */
+    border: 2px solid var(--black);
+    margin-top:-1px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+.checkboxes {
+    line-height: 2.5;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    background-color:none;
+    border: 1px solid var(--whitegray);
+    cursor: pointer;
+}
+  
+
+label {
+    margin-left: 12px;
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--green);
+    border: 1px solid var(--green);
+}
+
+input[type="checkbox"]:after {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 14px;
+    color: black;
+    display: none;
+}
+
+input[type="checkbox"]:checked:after {
+    display: block;
+}
+
+.password-strength-container {
+    width: 476px;
+    height: 72px;
+    background-color: var(--black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px;
+}
+
+.strength-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.strength-bars-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.strength-bar-1, .strength-bar-2, .strength-bar-3, .strength-bar-4, .strength-bar-5 {
+    width: 10px;
+    height: 28px;
+    border: solid 1px var(--whitegray);
+    background-color: none;
+}
+
+.button-container {
+    width: 100%;
+    height: 65px;
+    background-color: var(--green);
+    border: none;
+    border-radius: 4px;
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.generate-btn {
+    width: 75px;
+    height: 65px;
+    background-color: var(--green);
+    border: none;
+    border-radius: 4px;
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+/* MOBILE VIEW */   
+@media only screen and (max-width: 600px) {
+    .container,
+    .password-out,
+    .generate-password-container,
+    .password-strength-container {
+      width: 100%;
+      max-width: 540px; /* keeping the existing max-width */
+    }
+
+    .strength-label {
+        font-size: 12px;
+    }
+  
+    h6 {
+      font-size: 10px;
+    }
+  
+    body {
+      font-size: 12px;
+      flex-direction: column; /* stack elements vertically if needed */
+      padding: 10px 30px;
+    }
+  
+    /* Other adjustments can be made here, as needed */
+  }
+  
